@@ -27,3 +27,16 @@ if ($stmt->execute()) {
 $stmt->close();
 $conn->close();
 ?>
+----------------------------------------------------------------------------------------------------------------------
+//
+$resultMessage = "";
+if ($stmt->execute()) {
+  $resultMessage = "Dati inseriti con successo!";
+} else {
+  $resultMessage = "Errore: " . $stmt->error;
+}
+
+$stmt->close();
+$conn->close();
+
+echo $resultMessage;
